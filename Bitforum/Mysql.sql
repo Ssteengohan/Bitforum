@@ -1,25 +1,15 @@
-CREATE DATABASE Terabit;
+CREATE DATABASE Bitforum;
 
 CREATE TABLE Post(
  id int NOT NULL AUTO_INCREMENT primary key,
  Titel varchar(755) NOT NULL,
  Taal varchar(255) NOT NULL,
  Code   text NOT NULL, 
- IMG LONGBLOB NOT NULL,
- link varchar(255) NOT NULL,
+ Vraag text NOT NULL,
  date datetime not null,
  User varchar(255) NOT NULL
 );
 
-CREATE TABLE Vragen(
- id int NOT NULL AUTO_INCREMENT primary key,
- Titel varchar(755) NOT NULL,
- Taal varchar(255) NOT NULL,
- Code   text NOT NULL, 
- Vraag varchar(7500) NOT NULL,
- date datetime not null,
- User varchar(255) NOT NULL
-);
 
 CREATE TABLE comments (
     cid int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -34,7 +24,7 @@ CREATE TABLE comments (
   `id` int(11) NOT NULL AUTO_INCREMENT,  
   `user` varchar(255) NOT NULL,  
   `comid` int(11) NOT NULL,  
-  `type` varchar(10) NOT NULL
+  `type` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)  
  );
 
